@@ -1,12 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Router } from 'react-router-dom';
+import { AppHeader } from "./common/components/AppHeader"
 import './App.css';
+import { AppRouter } from './Router'
+import history from './history';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <Router history={history}>
+        <header className="App-header">
+          <AppHeader/>
+        </header>
+        <div className="Main-app">
+          <AppRouter />
+        </div>
+      </Router>
     </div>
   );
 }

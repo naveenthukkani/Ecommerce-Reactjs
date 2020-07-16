@@ -1,0 +1,53 @@
+.Books-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+img {
+    width: 80%;
+    height: 150px;
+    background-color: brown;
+    margin-top: 5px;
+}
+
+.Book {
+    width: 200px;
+    height: 300px;
+    margin: 3px;
+    background-color: white;
+    border: 1px gray solid;
+    padding: 5px;
+}
+
+.Book-Description {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.Buy-button {
+    color: #fff;
+    background-color: brown;
+    width: 50%;
+    outline: none;
+    border-color: brown;
+}
+
+.Book-details-container {
+    display: flex;
+    margin: 20px;
+}
+
+.Image-container {
+    flex: .3;
+}
+
+.Details-container {
+    flex: 0.7;
+    text-align: left;
+}
+
+.details-buttons {
+    margin-right: 20px;
+}
