@@ -1,0 +1,33 @@
+{
+    "expression": "v1/bookslist",
+    "method": "GET",
+    "name": "getListOfBooks",
+    "isArray": true,
+    "responses": {
+        "default": {
+            "default": true,
+            "status": 200,
+            "data": [{
+                    "title": "maths",
+                    "description": "it is simple problems book for children",
+                    "author": "naveen",
+                    "price": 5,
+                    "pagecount": 1,
+                    "isbn": "yes",
+                    "id": 1
+                },
+                {
+                    "title": "social",
+                    "description": "it is simple problems book for children",
+                    "author": "naveen",
+                    "price": 100,
+                    "pagecount": 2,
+                    "isbn": "yes",
+                    "id": 2
+                }
+            ]
+
+        }
+    }
+
+}
