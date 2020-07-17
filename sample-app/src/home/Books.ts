@@ -1,6 +1,6 @@
 export interface Books {
-    name:string,
-    discription: string,
+    title:string,
+    description: string,
     author: string,
     price: number,
     pagecount: number,

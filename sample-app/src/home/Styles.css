@@ -49,5 +49,9 @@ img {
 }
 
 .details-buttons {
-    margin-right: 20px;
+    margin: 20px;
+}
+
+.Book-Description-detail {
+    margin: 5px;
 }

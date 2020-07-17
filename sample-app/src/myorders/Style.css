@@ -1,0 +1,36 @@
+.Orders-list {
+    margin-top: 20px;
+}
+
+.Order-conatiner {
+    border: 1px gray solid;
+    height: 150px;
+    margin-bottom: 20x;
+    width: 95%;
+    margin: 30px;
+}
+
+.Header-view {
+    background-color: brown;
+    height: 25px;
+}
+
+.Date-string {
+    float: left;
+}
+
+.Status {
+    float: right;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: brown;
+    float: left;
+}
+
+.Data-container {
+    text-align: left;
+}

@@ -2,8 +2,8 @@ import {Books} from "../../src/home/Books";
 
 export const BooksList: Array<Books> = [
    {
-       name:"maths",
-       discription: "it is simple problems book for children",
+       title:"maths",
+       description: "it is simple problems book for children",
        author:"naveen",
        price: 5,
        pagecount: 1,
@@ -11,8 +11,8 @@ export const BooksList: Array<Books> = [
 	   id:1,
    },
    {
-    name:"social",
-    discription: "it is sample book for children",
+    title:"social",
+    description: "it is sample book for children",
     author:"naveen",
     price: 7,
     pagecount: 1,
@@ -20,8 +20,8 @@ export const BooksList: Array<Books> = [
 	id:2,
 },
 {
-    name:"telugu",
-    discription: "it is language learning book",
+    title:"telugu",
+    description: "it is language learning book",
     author:"naveen",
     price: 8,
     pagecount: 1,
@@ -29,8 +29,8 @@ export const BooksList: Array<Books> = [
 	id:3,
 },
 {
-    name:"English",
-    discription: "it is international language learning book",
+    title:"English",
+    description: "it is international language learning book",
     author:"naveen",
     price: 5,
     pagecount: 1,
@@ -38,8 +38,8 @@ export const BooksList: Array<Books> = [
 	id:4,
 },
 {
-    name:"maths",
-    discription: "it is simple problems book for children",
+    title:"maths",
+    description: "it is simple problems book for children",
     author:"naveen",
     price: 5,
     pagecount: 1,
@@ -47,8 +47,8 @@ export const BooksList: Array<Books> = [
 	id:5,
 },
 {
-	name:"social",
-	discription: "it is sample book for children",
+	title:"social",
+	description: "it is sample book for children",
 	author:"naveen",
 	price: 7,
 	pagecount: 1,
@@ -56,8 +56,8 @@ export const BooksList: Array<Books> = [
 	id:6,
 },
 {
-	name:"telugu",
-	discription: "it is language learning book",
+	title:"telugu",
+	description: "it is language learning book",
 	author:"naveen",
 	price: 8,
 	pagecount: 1,
@@ -65,8 +65,8 @@ export const BooksList: Array<Books> = [
 	id:7,
 },
 {
-	name:"English",
-	discription: "it is international language learning book",
+	title:"English",
+	description: "it is international language learning book",
 	author:"naveen",
 	price: 5,
 	pagecount: 1,
@@ -74,8 +74,8 @@ export const BooksList: Array<Books> = [
 	id:8,
 },
 {
-	name:"social",
-	discription: "it is sample book for children",
+	title:"social",
+	description: "it is sample book for children",
 	author:"naveen",
 	price: 7,
 	pagecount: 1,
@@ -83,8 +83,8 @@ export const BooksList: Array<Books> = [
 	id:9,
 },
 {
-	name:"telugu",
-	discription: "it is language learning book",
+	title:"telugu",
+	description: "it is language learning book",
 	author:"naveen",
 	price: 8,
 	pagecount: 1,
@@ -92,8 +92,8 @@ export const BooksList: Array<Books> = [
 	id:10,
 },
 {
-	name:"English",
-	discription: "it is international language learning book",
+	title:"English",
+	description: "it is international language learning book",
 	author:"naveen",
 	price: 5,
 	pagecount: 1,

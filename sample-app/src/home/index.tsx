@@ -8,7 +8,7 @@ import "./Styles.css";
 class Home extends Component {
 
   handleBookEvent =(book: Books) => {
-    history.push(`/bookdetails/${book.id}`)
+    history.push(`/bookdetails`)
   }
   render() {
     return (
@@ -16,8 +16,8 @@ class Home extends Component {
         { BooksList.map((book) => 
           <div onClick={()=> this.handleBookEvent(book)}  className="Book" key={book.id}>
             <img></img>
-            <p>{book.name}</p>
-            <p className="Book-Description">{book.discription}</p>
+            <p>{book.title}</p>
+            <p className="Book-Description">{book.description}</p>
             <button className="Buy-button">Buy Button</button>
           </div>
         )

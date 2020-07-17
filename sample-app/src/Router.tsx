@@ -12,6 +12,7 @@ export const AppRouter = () => {
   return (
       <div>
         <Switch>
+          <Route exact path="/"><Home /></Route>
           <Route path="/home"><Home /></Route>
           <Route path="/myorders"><MyOrders /></Route>
           <Route path="/cart"><Cart /></Route>
