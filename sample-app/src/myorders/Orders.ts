@@ -6,4 +6,5 @@ export interface Orders {
     bookPrice: number,
     imageUrl: String,
     id:number,
+    pageCount: number
   };

@@ -9,5 +9,6 @@ export const OrdersList: Array<Orders> = [
         bookPrice: 80,
         imageUrl: "",
         id:1,
+        pageCount: 1
     },
 ];

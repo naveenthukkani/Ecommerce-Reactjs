@@ -3,12 +3,18 @@ import {BooksList} from "../__mocks__/BooksList"
 import history from '../history';
 import {Books} from "./Books"
 import "./Styles.css";
+import Api from '../config/Api'
 
 
 class Home extends Component {
 
+  async componentDidMount() {
+    let booksList = await Api.get('/v1/bookslist');
+    console.log(booksList);
+  }
+
   handleBookEvent =(book: Books) => {
-    history.push(`/bookdetails`)
+    history.push('/bookdetails')
   }
   render() {
     return (

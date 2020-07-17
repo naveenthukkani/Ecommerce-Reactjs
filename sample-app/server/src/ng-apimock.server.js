@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import express from 'express';
 import ngApimock from 'ng-apimock';
 import tcpPortUsed from 'tcp-port-used';
-import { MOCKFILES_PATH, MOCKING_APP_FLODER, MOCKING_URL, SERVER_PORT } from './constants';
+import { MOCKING_URL, SERVER_PORT } from './constants';
 
 (async() => {
     const isPortInUse = await tcpPortUsed.check(SERVER_PORT, '127.0.0.1');
