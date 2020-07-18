@@ -1,4 +1,4 @@
-import {Orders} from '../../myorders/Orders'
+import {Order} from '../../myorders/Order'
 
 export enum OrdersActionTypes {
     FETCH_REQUEST = "@@Orders/FETCH_REQUEST",
@@ -7,6 +7,6 @@ export enum OrdersActionTypes {
 };
 export interface OrdersState {
     readonly loading: boolean; 
-    readonly myorders: Orders[];
+    readonly myorders: Order[];
     readonly errors?: string;
 };

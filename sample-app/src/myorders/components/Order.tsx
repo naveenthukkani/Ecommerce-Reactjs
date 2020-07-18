@@ -1,9 +1,9 @@
 import React from 'react';
 import "../Style.css"
-import {Orders} from "../Orders"
+import {Order} from "../Order"
 import Book from '../../images/book.jpg'
 
-export const Order: React.FC<Orders> = (props) => {
+export const MyOrder: React.FC<Order> = (props) => {
 return (
     <div className="Order-conatiner" key={props.id}>
       <div className="Header-view">

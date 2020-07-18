@@ -1,7 +1,7 @@
 import { Reducer } from "redux";
 import { OrdersActionTypes, OrdersState } from "./types";
 export const initialState: OrdersState = {
-    myorders: [],
+  myorders: [],
   errors: undefined,
   loading: false
 };
@@ -11,8 +11,7 @@ const reducer: Reducer<OrdersState> = (state = initialState, action) => {
       return { ...state, loading: true };
     }
     case OrdersActionTypes.FETCH_SUCCESS: {
-      console.log(action.payload);
-      return { ...state, loading: false, data: action.payload };
+      return { ...state, loading: false, myorders: action.payload };
     }
     case OrdersActionTypes.FETCH_ERROR: {
       return { ...state, loading: false, errors: action.payload };

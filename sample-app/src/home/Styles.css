@@ -67,3 +67,16 @@ img {
 label {
     font-weight: bold;
 }
+
+@media only screen and (max-width: 960px) {
+    .Book-details-container {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        width: 200px;
+        height: 150px;
+        background-color: brown;
+        margin-top: 5px;
+    }
+}

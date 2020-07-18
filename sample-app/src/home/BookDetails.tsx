@@ -1,21 +1,37 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {RouteComponentProps} from 'react-router-dom'
-import Book from '../images/book.jpg'
+import BookImage from '../images/book.jpg'
 import {actions, selectors} from '../store'
-import {Books} from "./Books"
+import {Book} from "./Book"
+import { Order } from '../myorders/Order';
 
 interface ComponentProps extends RouteComponentProps{
   id: number,
 }
 
 interface MapStateToPropsTypes {
-  ListOfBooks: Books[]
+  ListOfBooks: Book[]
 }
 class BookDetails extends Component <any>{
-
   constructor(props:any){
     super(props);
+  }
+
+  buyButtonAction = (e:any,book: Book) => {
+    const orderObj :Order= {
+      "date": new Date().toLocaleString(),
+      "status": "Delivered",
+      "title": book?.title,
+      "subtitle": "",
+      "author": book?.author,
+      "price": book?.price,
+      "id":book?.id,
+      "pages": book?.pages,
+      "isbn": book?.isbn
+    } 
+    e.stopPropagation();
+    this.props.actions.buyBook(orderObj);
   }
 
   render(){
@@ -26,7 +42,7 @@ class BookDetails extends Component <any>{
     return (
         <div className="Book-details-container">
             <div className="Image-container">
-                <img src={Book} alt="Book"></img>
+                <img src={BookImage} alt="Book"></img>
             </div>
             <div className="Details-container">
             <h1>{book?.title}</h1>
@@ -48,7 +64,7 @@ class BookDetails extends Component <any>{
             </div>
             <div>
             <button className="details-buttons">Add to cart</button>
-            <button className="details-buttons">Buy Now</button>
+            <button className="details-buttons" onClick={(e) => this.buyButtonAction(e,book)}>Buy Now</button>
             </div>
             <div className="Book-Description-detail">
               <label>Description: </label>
@@ -59,10 +75,16 @@ class BookDetails extends Component <any>{
     )
   }
 }
+const mapDispatchToProps=(dispatch: any)=> ({
+  actions: { 
+    buyBook: (orderObj: Order) => dispatch(actions.myorders.fetchRequest(orderObj))
+  }
+});
 const mapStateToProps = (state: any) => ({
   ListOfBooks: selectors.home.getBooksList(state)
 });
 
-export default connect<MapStateToPropsTypes>(
+export default connect<MapStateToPropsTypes,any>(
   mapStateToProps,
+  mapDispatchToProps
 )(BookDetails);

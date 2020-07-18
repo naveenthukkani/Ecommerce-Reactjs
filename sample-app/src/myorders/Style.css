@@ -47,3 +47,10 @@
 .Book-title {
     font-size: 25px;
 }
+
+@media only screen and (max-width: 760px) {
+    .Orders-data-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,4 +1,4 @@
-import {Books} from "../../src/home/Books";
+import {Books} from "../home/Book";
 
 export const BooksList: Array<Books> = [{
 	isbn: "9781593275846",

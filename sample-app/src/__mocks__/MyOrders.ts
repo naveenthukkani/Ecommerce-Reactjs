@@ -1,4 +1,4 @@
-import {Orders} from "../../src/myorders/Orders";
+import {Orders} from "../myorders/Order";
 
 export const OrdersList: Array<Orders> = [
         {

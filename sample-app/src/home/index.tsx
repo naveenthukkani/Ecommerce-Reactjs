@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import history from '../history';
-import {Books} from "./Books"
+import {Book} from "./Book"
 import "./Styles.css";
-import Book from '../images/book.jpg'
+import BookImage from '../images/book.jpg'
 import {actions, selectors} from '../store'
+import { Order } from '../myorders/Order';
 
 interface MapStateToPropsTypes {
-  ListOfBooks: Books[]
+  ListOfBooks: Book[]
 }
 
 class Home extends Component<any> {
@@ -18,12 +19,24 @@ class Home extends Component<any> {
      this.props.actions.fetchBooksList();
   }
 
-  handleBookEvent =(book: Books) => {
+  handleBookEvent =(book: Book) => {
     history.push(`/bookdetails/${book.id}`)
   }
 
-  buyButtonAction = (book: Books) => {
-    this.props.actions.fetchBooksList(book);
+  buyButtonAction = (e:any,book: Book) => {
+    const orderObj :Order= {
+      "date": new Date().toLocaleString(),
+      "status": "Delivered",
+      "title": book.title,
+      "subtitle": "",
+      "author": book.author,
+      "price": book.price,
+      "id":book.id,
+      "pages": book.pages,
+      "isbn": book.isbn
+    } 
+    e.stopPropagation();
+    this.props.actions.buyBook(orderObj);
   }
 
   render() {
@@ -31,10 +44,10 @@ class Home extends Component<any> {
       <div className="Books-list">
         { this.props.ListOfBooks.map((book: any) => 
           <div onClick={()=> this.handleBookEvent(book)}  className="Book" key={book.id}>
-            <img src={Book} alt="Book"></img>
+            <img src={BookImage} alt="Book"></img>
             <p className="Book-Description">{book.title}</p>
             <p className="Book-Description">{book.description}</p>
-            <button className="Buy-button" onClick={() => this.buyButtonAction(book)}>Buy Button</button>
+            <button className="Buy-button" onClick={(e) => this.buyButtonAction(e,book)}>Buy Button</button>
           </div>
         )
       }
@@ -46,7 +59,7 @@ class Home extends Component<any> {
 const mapDispatchToProps=(dispatch: any)=> ({
   actions: { 
     fetchBooksList: () => dispatch(actions.home.fetchRequest()),
-    addBookTocart: (book: Books) => dispatch(actions.myOrders.addBookTocart(book))
+    buyBook: (orderObj: Order) => dispatch(actions.myorders.fetchRequest(orderObj))
   }
 });
 

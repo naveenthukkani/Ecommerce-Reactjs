@@ -1,4 +1,4 @@
-export interface Orders {
+export interface Order {
     date: String,
     status: String,
     title: String,

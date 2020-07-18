@@ -42,3 +42,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+### `yarn server`
+
+First we need to go to the project folrder(smaple-app) and after that cd/server and do yarn install so that server related node modules are installed.
+
+after that come back to (sample-app) and in new terminal do yarn server.
+
+you can also see the UI of server by tying https://localhost:2222 or http://localhost:2222

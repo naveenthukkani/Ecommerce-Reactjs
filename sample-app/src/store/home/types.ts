@@ -1,4 +1,4 @@
-import {Books} from '../../home/Books'
+import {Book} from '../../home/Book'
 
 export enum BooksActionTypes {
     FETCH_REQUEST = "@@Books/FETCH_REQUEST",
@@ -7,6 +7,6 @@ export enum BooksActionTypes {
 };
 export interface BooksState {
     readonly loading: boolean;
-    readonly data: Books[];
+    readonly data: Book[];
     readonly errors?: string;
 };

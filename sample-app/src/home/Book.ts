@@ -1,4 +1,4 @@
-export interface Books {
+export interface Book {
     title:string,
     description: string,
     author: string,
@@ -6,5 +6,5 @@ export interface Books {
     pages: number,
     isbn: string,
     id: number,
-	subtitle: string,
+	ssubtitle: string,
   }

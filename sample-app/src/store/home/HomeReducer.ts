@@ -11,7 +11,6 @@ const reducer: Reducer<BooksState> = (state = initialState, action) => {
       return { ...state, loading: true };
     }
     case BooksActionTypes.FETCH_SUCCESS: {
-      console.log(action.payload);
       return { ...state, loading: false, data: action.payload };
     }
     case BooksActionTypes.FETCH_ERROR: {

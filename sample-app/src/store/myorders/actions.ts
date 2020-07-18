@@ -1,11 +1,11 @@
 import { action } from "typesafe-actions";
 import { OrdersActionTypes } from "./types";
-import { Orders} from '../../myorders/Orders';
+import { Order} from '../../myorders/Order';
 
 
 const actions = {
-  fetchRequest:() => action(OrdersActionTypes.FETCH_REQUEST),
-  fetchSuccess:(data: Orders[]) =>
+  fetchRequest:(data: Order) => action(OrdersActionTypes.FETCH_REQUEST, data),
+  fetchSuccess:(data: Order[]) =>
     action(OrdersActionTypes.FETCH_SUCCESS, data),
   fetchError:(message: string) =>
     action(OrdersActionTypes.FETCH_ERROR, message)

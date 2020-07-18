@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import { Order } from "./components/Order";
-import {OrdersList} from "../__mocks__/MyOrders"
+import { connect } from 'react-redux';
+import { MyOrder } from "./components/Order";
+import {actions, selectors} from '../store'
+import { Order } from './Order';
 
+interface MapStateToPropsTypes {
+  ordersList: Order[]
+}
 
-export default class MyOrders extends Component {
+class MyOrders extends Component<any> {
   render() {
+    console.log(this.props.ordersList);
     return (
       <div className="Orders-list">
-        { OrdersList.map((OrderObj) => 
+        { this.props.ordersList.map((OrderObj: Order) => 
           <div >
-              <Order key={OrderObj.id} {...OrderObj}/>
+              <MyOrder key={OrderObj.id} {...OrderObj}/>
           </div>
         )
       }
@@ -17,3 +23,11 @@ export default class MyOrders extends Component {
     )
   }
 }
+
+const mapStateToProps = (state: any) => ({
+  ordersList: selectors.myorders.getOrdersList(state)
+});
+
+export default connect<MapStateToPropsTypes>(
+  mapStateToProps,
+)(MyOrders);
