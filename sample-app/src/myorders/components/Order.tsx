@@ -17,32 +17,23 @@ return (
             </div>
       </div>
         <div className="Orders-data-container">
-            <img className="Orders-img" src={Book}></img>
+            <img className="Orders-img" src={Book} alt="Book"></img>
             <div className="Data-container">
-            <span className="Book-title">{props.bookTitle}</span>
+            <span className="Book-title">{props.title}</span>
             <div>
               <label>Book Price: </label>
-              <span>{props.bookPrice}</span>
+              <span>{props.price}</span>
             </div>
             <div>
               <label>Author Name: </label>
-              <span>{props.authorName}</span>
+              <span>{props.author}</span>
             </div>
             <div>
               <label>Page Count: </label>
-              <span>{props.pageCount}</span>
+              <span>{props.pages}</span>
             </div>
             </div>
         </div>
     </div>
 )
 };
-
-Order.defaultProps ={
-    date: new Date().toLocaleDateString(),
-    status:"Delivered",
-    bookTitle: "maths",
-    authorName: "Naveen",
-    bookPrice: 80,
-    imageUrl: ""
-}

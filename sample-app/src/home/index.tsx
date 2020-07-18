@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {BooksList} from "../__mocks__/BooksList"
 import history from '../history';
 import {Books} from "./Books"
 import "./Styles.css";
@@ -22,15 +21,20 @@ class Home extends Component<any> {
   handleBookEvent =(book: Books) => {
     history.push(`/bookdetails/${book.id}`)
   }
+
+  buyButtonAction = (book: Books) => {
+    this.props.actions.fetchBooksList(book);
+  }
+
   render() {
     return (
       <div className="Books-list">
-        { BooksList.map((book) => 
+        { this.props.ListOfBooks.map((book: any) => 
           <div onClick={()=> this.handleBookEvent(book)}  className="Book" key={book.id}>
-            <img src={Book}></img>
+            <img src={Book} alt="Book"></img>
             <p className="Book-Description">{book.title}</p>
             <p className="Book-Description">{book.description}</p>
-            <button className="Buy-button">Buy Button</button>
+            <button className="Buy-button" onClick={() => this.buyButtonAction(book)}>Buy Button</button>
           </div>
         )
       }
@@ -40,8 +44,9 @@ class Home extends Component<any> {
 }
 
 const mapDispatchToProps=(dispatch: any)=> ({
-  actions: {
-    fetchBooksList: () => dispatch(actions.home.fetchRequest())
+  actions: { 
+    fetchBooksList: () => dispatch(actions.home.fetchRequest()),
+    addBookTocart: (book: Books) => dispatch(actions.myOrders.addBookTocart(book))
   }
 });
 

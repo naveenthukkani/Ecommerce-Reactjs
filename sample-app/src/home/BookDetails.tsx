@@ -1,28 +1,32 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import {RouteComponentProps} from 'react-router-dom'
 import Book from '../images/book.jpg'
-import {BooksList} from "../__mocks__/BooksList"
+import {actions, selectors} from '../store'
+import {Books} from "./Books"
 
 interface ComponentProps extends RouteComponentProps{
   id: number,
 }
 
-class BookDetails extends Component <ComponentProps>{
+interface MapStateToPropsTypes {
+  ListOfBooks: Books[]
+}
+class BookDetails extends Component <any>{
 
-  constructor(props: ComponentProps){
+  constructor(props:any){
     super(props);
   }
-  
-  render(){
-    const book = BooksList.find((obj) =>{ 
-      console.log(obj.id);
-      return obj.id == this.props.match.params.id
-    });
 
+  render(){
+    const book = this.props.ListOfBooks.find((obj: any) =>{ 
+      return obj.id ===Number(this.props.match.params.id)
+    });
+    
     return (
         <div className="Book-details-container">
             <div className="Image-container">
-                <img src={Book}></img>
+                <img src={Book} alt="Book"></img>
             </div>
             <div className="Details-container">
             <h1>{book?.title}</h1>
@@ -55,5 +59,10 @@ class BookDetails extends Component <ComponentProps>{
     )
   }
 }
+const mapStateToProps = (state: any) => ({
+  ListOfBooks: selectors.home.getBooksList(state)
+});
 
-export default BookDetails;
+export default connect<MapStateToPropsTypes>(
+  mapStateToProps,
+)(BookDetails);

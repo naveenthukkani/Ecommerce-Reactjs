@@ -5,9 +5,8 @@ import {booksApi} from "../../config/Api"
 
 function* handleFetch() {
   try {
-      const response= yield call(booksApi.getListOfBooks('/v1/bookslist'))
-      console.log("response"+ response.data)
-    yield put(actions.fetchSuccess(response.data));
+      const response= yield call(booksApi.getListOfBooks,'/v1/bookslist')
+      yield put(actions.fetchSuccess(response.data));
   } catch (err) {
     if (err instanceof Error && err.stack) {
       yield put(actions.fetchError(err.stack));

@@ -1,10 +1,11 @@
 export interface Orders {
     date: String,
     status: String,
-    bookTitle: String,
-    authorName: String,
-    bookPrice: number,
-    imageUrl: String,
+    title: String,
+    subtitle: String,
+    author: String,
+    price: number,
     id:number,
-    pageCount: number
+    pages: number,
+    isbn: string
   };
