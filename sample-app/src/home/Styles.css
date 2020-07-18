@@ -31,9 +31,13 @@ img {
     color: #fff;
     background-color: brown;
     width: 50%;
-    outline: none;
     border-color: brown;
     padding: 5px;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    background-image: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .Book-details-container {
@@ -58,6 +62,11 @@ img {
     border-color: brown;
     padding: 5px;
     color: #fff;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    background-image: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .Book-Description-detail {

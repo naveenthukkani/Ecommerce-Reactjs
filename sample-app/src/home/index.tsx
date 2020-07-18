@@ -35,6 +35,7 @@ class Home extends Component<any> {
       "pages": book.pages,
       "isbn": book.isbn
     } 
+    alert(`${book.title} checkout succefully `)
     e.stopPropagation();
     this.props.actions.buyBook(orderObj);
   }

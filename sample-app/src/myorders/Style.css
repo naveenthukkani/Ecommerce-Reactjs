@@ -53,4 +53,11 @@
         display: flex;
         flex-direction: column;
     }
+    .Order-conatiner {
+        border: 1px gray solid;
+        height: 250px;
+        margin-bottom: 20x;
+        width: 95%;
+        margin: 20px;
+    }
 }

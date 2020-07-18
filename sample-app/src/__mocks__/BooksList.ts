@@ -1,6 +1,6 @@
-import {Books} from "../home/Book";
+import {Book} from "../home/Book";
 
-export const BooksList: Array<Books> = [{
+export const BooksList: Array<Book> = [{
 	isbn: "9781593275846",
 	title: "Eloquent JavaScript, Second Edition",
 	subtitle: "A Modern Introduction to Programming",

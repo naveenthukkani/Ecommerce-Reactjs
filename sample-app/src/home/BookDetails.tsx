@@ -30,11 +30,13 @@ class BookDetails extends Component <any>{
       "pages": book?.pages,
       "isbn": book?.isbn
     } 
+    alert(`${book.title} checkout succefully `)
     e.stopPropagation();
     this.props.actions.buyBook(orderObj);
   }
 
   addToCartAction = (e: any , book: Book) =>{
+    alert(`${book.title} added to cart succefully `)
     e.stopPropagation();
     this.props.actions.addToCart(book);
   }

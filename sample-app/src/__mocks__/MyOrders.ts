@@ -1,6 +1,6 @@
-import {Orders} from "../myorders/Order";
+import {Order} from "../myorders/Order";
 
-export const OrdersList: Array<Orders> = [
+export const OrdersList: Array<Order> = [
         {
             date: new Date().toLocaleString(),
             status: "Delivered",
