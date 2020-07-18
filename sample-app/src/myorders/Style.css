@@ -17,10 +17,14 @@
 
 .Date-string {
     float: left;
+    margin-left: 10px;
+    color: #fff;
 }
 
 .Status {
     float: right;
+    margin-right: 10px;
+    color: #fff;
 }
 
 .Orders-img {
@@ -33,4 +37,13 @@
 
 .Data-container {
     text-align: left;
+}
+
+.Orders-data-container {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.Book-title {
+    font-size: 25px;
 }

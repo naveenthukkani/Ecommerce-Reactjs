@@ -4,10 +4,12 @@ import { AppHeader } from "./common/components/AppHeader"
 import './App.css';
 import { AppRouter } from './Router'
 import history from './history';
+import {Provider} from 'react-redux'
+import {store} from './store/store'
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
       <Router history={history}>
         <header className="App-header">
           <AppHeader/>
@@ -16,7 +18,7 @@ function App() {
           <AppRouter />
         </div>
       </Router>
-    </div>
+    </Provider>
   );
 }
 

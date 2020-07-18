@@ -3,7 +3,8 @@ export interface Books {
     description: string,
     author: string,
     price: number,
-    pagecount: number,
+    pages: number,
     isbn: string,
     id: number,
+	subtitle: string,
   }

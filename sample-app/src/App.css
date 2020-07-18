@@ -1,24 +1,19 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  height: 40px;
-  background-color: white;
+    height: 40px;
+    background-color: white;
 }
 
-.Main-app{
-  border-top: 1px gray solid;
+.Main-app {
+    border-top: 1px gray solid;
 }
-
