@@ -1,14 +1,13 @@
 import { all, call, fork, put, takeEvery, select } from "redux-saga/effects";
-import { OrdersActionTypes } from "./Types";
+import { CartActionTypes } from "./Types";
 import actions from './Actions'
 import {selectors} from "..";
 
 function* handleFetch(data:any) {
   try {
-      const orders = yield select(selectors.myorders.getOrdersList);
-      orders.push(data.payload);
-      console.log(orders);
-      yield put(actions.fetchSuccess(orders));
+      const cartItems = yield select(selectors.cart.getCartItems);
+      cartItems.push(data.payload);
+      yield put(actions.fetchSuccess(cartItems));
   } catch (err) {
     if (err instanceof Error && err.stack) {
       yield put(actions.fetchError(err.stack));
@@ -18,9 +17,9 @@ function* handleFetch(data:any) {
   }
 }
 function* watchFetchRequest() {
-  yield takeEvery(OrdersActionTypes.FETCH_REQUEST, handleFetch);
+  yield takeEvery(CartActionTypes.FETCH_REQUEST, handleFetch);
 }
-function* MyOrdersSaga() {
+function* CartSaga() {
   yield all([fork(watchFetchRequest)]);
 }
-export default MyOrdersSaga;
+export default CartSaga;

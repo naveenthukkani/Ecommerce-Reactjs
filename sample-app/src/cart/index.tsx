@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
+import { Address } from "./components/Address";
+import { Cart } from "./components/Cart";
 
-export default class Cart extends Component {
+class CartItems extends Component<any> {
   render() {
-    return <p>Cart</p>
+    return (
+      <div className="Main-container">
+      <div className="Adress-container">
+            <Address />
+      </div>
+      <div className="Cart-container">
+          <div >
+              <Cart />
+          </div>
+      </div>
+      </div>
+    )
   }
 }
+
+export default CartItems;

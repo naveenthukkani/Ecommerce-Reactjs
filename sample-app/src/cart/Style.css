@@ -1,0 +1,54 @@
+.Main-container {
+    display: flex;
+    margin: 20px
+}
+
+.Adress-container {
+    flex: 0.4
+}
+
+.Cart-container {
+    flex: 0.6
+}
+
+.Address-sub-conatiner {
+    margin-top: 15px;
+}
+
+.Cart-sub-conatiner {
+    margin-top: 15px;
+}
+
+.Address-buttons {
+    margin: 20px;
+    background-color: brown;
+    outline: none;
+    border-color: brown;
+    padding: 5px;
+    color: #fff;
+}
+
+.Address-box {
+    height: 150px;
+    width: 70%;
+}
+
+.Book-Names {
+    text-align: left;
+}
+
+.Heading {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Payment-info {
+    border: 1px gray solid;
+    padding: 20px;
+    text-align: left;
+}
+
+.Payment-itmes {
+    width: 60%;
+    text-align: right;
+}

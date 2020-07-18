@@ -1,5 +1,5 @@
 import { action } from "typesafe-actions";
-import { OrdersActionTypes } from "./types";
+import { OrdersActionTypes } from "./Types";
 import { Order} from '../../myorders/Order';
 
 

@@ -1,5 +1,5 @@
 import { Reducer } from "redux";
-import { OrdersActionTypes, OrdersState } from "./types";
+import { OrdersActionTypes, OrdersState } from "./Types";
 export const initialState: OrdersState = {
   myorders: [],
   errors: undefined,

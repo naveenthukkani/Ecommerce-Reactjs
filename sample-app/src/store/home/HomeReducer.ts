@@ -1,5 +1,5 @@
 import { Reducer } from "redux";
-import { BooksActionTypes, BooksState } from "./types";
+import { BooksActionTypes, BooksState } from "./Types";
 export const initialState: BooksState = {
   data: [],
   errors: undefined,

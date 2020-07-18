@@ -1,6 +1,6 @@
 import reducers from './HomeReducer';
 import actions  from './HomeActions';
-import {BooksActionTypes} from './types';
+import {BooksActionTypes} from './Types';
 import saga from './HomeSaga'
 import selectors from './HomeSelectors';
 

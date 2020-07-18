@@ -34,13 +34,19 @@ class BookDetails extends Component <any>{
     this.props.actions.buyBook(orderObj);
   }
 
+  addToCartAction = (e: any , book: Book) =>{
+    e.stopPropagation();
+    this.props.actions.addToCart(book);
+  }
+
   render(){
     const book = this.props.ListOfBooks.find((obj: any) =>{ 
       return obj.id ===Number(this.props.match.params.id)
     });
     
     return (
-        <div className="Book-details-container">
+      <div>
+        {book ? <div className="Book-details-container">
             <div className="Image-container">
                 <img src={BookImage} alt="Book"></img>
             </div>
@@ -63,7 +69,7 @@ class BookDetails extends Component <any>{
               <span>{book?.isbn}</span>
             </div>
             <div>
-            <button className="details-buttons">Add to cart</button>
+            <button className="details-buttons" onClick={(e) => this.addToCartAction(e,book)}>Add to cart</button>
             <button className="details-buttons" onClick={(e) => this.buyButtonAction(e,book)}>Buy Now</button>
             </div>
             <div className="Book-Description-detail">
@@ -71,13 +77,15 @@ class BookDetails extends Component <any>{
               <p>{book?.description}</p>
             </div>
             </div>
+            </div> :""}
         </div>
     )
   }
 }
 const mapDispatchToProps=(dispatch: any)=> ({
   actions: { 
-    buyBook: (orderObj: Order) => dispatch(actions.myorders.fetchRequest(orderObj))
+    buyBook: (orderObj: Order) => dispatch(actions.myorders.fetchRequest(orderObj)),
+    addToCart: (book: Book)=> dispatch(actions.cart.fetchRequest(book))
   }
 });
 const mapStateToProps = (state: any) => ({

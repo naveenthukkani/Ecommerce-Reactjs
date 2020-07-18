@@ -1,5 +1,5 @@
 import { all, call, fork, put, takeEvery } from "redux-saga/effects";
-import { BooksActionTypes } from "./types";
+import { BooksActionTypes } from "./Types";
 import actions  from "./HomeActions";
 import {booksApi} from "../../config/Api"
 

@@ -1,5 +1,5 @@
 import { action } from "typesafe-actions";
-import { BooksActionTypes } from "./types";
+import { BooksActionTypes } from "./Types";
 import { Book} from '../../home/Book';
 
 

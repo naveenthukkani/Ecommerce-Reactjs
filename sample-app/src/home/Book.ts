@@ -6,5 +6,5 @@ export interface Book {
     pages: number,
     isbn: string,
     id: number,
-	ssubtitle: string,
+	  subtitle: string,
   }
