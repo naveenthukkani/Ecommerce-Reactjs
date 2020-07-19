@@ -10,12 +10,11 @@ interface MapStateToPropsTypes {
 
 class MyOrders extends Component<any> {
   render() {
-    console.log(this.props.ordersList);
     return (
       <div className="Orders-list">
         { this.props.ordersList.map((OrderObj: Order) => 
-          <div >
-              <MyOrder key={OrderObj.id} {...OrderObj}/>
+          <div key={OrderObj.id}>
+              <MyOrder {...OrderObj}/>
           </div>
         )
       }
@@ -28,6 +27,7 @@ const mapStateToProps = (state: any) => ({
   ordersList: selectors.myorders.getOrdersList(state)
 });
 
+export {MyOrders};
 export default connect<MapStateToPropsTypes>(
   mapStateToProps,
 )(MyOrders);

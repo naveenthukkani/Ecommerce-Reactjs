@@ -8,7 +8,7 @@ import {actions, selectors} from '../store'
 import { Order } from '../myorders/Order';
 
 interface MapStateToPropsTypes {
-  ListOfBooks: Book[]
+  listOfBooks: Book[]
 }
 
 class Home extends Component<any> {
@@ -35,25 +35,27 @@ class Home extends Component<any> {
       "pages": book.pages,
       "isbn": book.isbn
     } 
-    alert(`${book.title} checkout succefully `)
+    alert(`${book.title} book is checkout succefully `)
     e.stopPropagation();
     this.props.actions.buyBook(orderObj);
   }
 
   render() {
+    const {listOfBooks} = this.props;
     return (
       <div className="Books-list">
-        { this.props.ListOfBooks.map((book: any) => 
+        { listOfBooks.length ? (
+          listOfBooks.map((book: any) => 
           <div onClick={()=> this.handleBookEvent(book)}  className="Book" key={book.id}>
             <img src={BookImage} alt="Book"></img>
             <p className="Book-Description">{book.title}</p>
             <p className="Book-Description">{book.description}</p>
             <button className="Buy-button" onClick={(e) => this.buyButtonAction(e,book)}>Buy Button</button>
           </div>
-        )
-      }
-      </div>
-    )
+        )) :(<div className="No-data">
+              <h1>No Data found.</h1>
+        </div>)}
+  </div>)
   }
 }
 
@@ -65,9 +67,10 @@ const mapDispatchToProps=(dispatch: any)=> ({
 });
 
 const mapStateToProps = (state: any) => ({
-  ListOfBooks: selectors.home.getBooksList(state)
+  listOfBooks: selectors.home.getBooksList(state)
 });
 
+export {Home};
 export default connect<MapStateToPropsTypes, any>(
   mapStateToProps,
   mapDispatchToProps)

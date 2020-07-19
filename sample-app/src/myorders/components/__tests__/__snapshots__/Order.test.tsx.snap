@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyOrderComponent renders the component correctly 1`] = `
+<div
+  className="Order-conatiner"
+  key="1"
+>
+  <div
+    className="Header-view"
+  >
+    <div
+      className="Date-string"
+    >
+      <label>
+        Order Placed:  
+      </label>
+      <span>
+        7/19/2020, 12:30:27 PM
+      </span>
+    </div>
+    <div
+      className="Status"
+    >
+      <label>
+        Status:  
+      </label>
+      <span>
+        Delivered
+      </span>
+    </div>
+  </div>
+  <div
+    className="Orders-data-container"
+  >
+    <img
+      alt="Book"
+      className="Orders-img"
+      src="book.jpg"
+    />
+    <div
+      className="Data-container"
+    >
+      <span
+        className="Book-title"
+      >
+        Eloquent JavaScript, Second Edition
+      </span>
+      <div>
+        <label>
+          Book Price: 
+        </label>
+        <span>
+          500
+        </span>
+      </div>
+      <div>
+        <label>
+          Author Name: 
+        </label>
+        <span>
+          Marijn Haverbeke
+        </span>
+      </div>
+      <div>
+        <label>
+          Page Count: 
+        </label>
+        <span>
+          472
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

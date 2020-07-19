@@ -11,7 +11,7 @@ interface ComponentProps extends RouteComponentProps{
 }
 
 interface MapStateToPropsTypes {
-  ListOfBooks: Book[]
+  listOfBooks: Book[]
 }
 class BookDetails extends Component <any>{
   constructor(props:any){
@@ -30,19 +30,19 @@ class BookDetails extends Component <any>{
       "pages": book?.pages,
       "isbn": book?.isbn
     } 
-    alert(`${book.title} checkout succefully `)
+    alert(`${book.title} book checkout succefully `)
     e.stopPropagation();
     this.props.actions.buyBook(orderObj);
   }
 
   addToCartAction = (e: any , book: Book) =>{
-    alert(`${book.title} added to cart succefully `)
+    alert(`${book.title} book added to cart succefully `)
     e.stopPropagation();
     this.props.actions.addToCart(book);
   }
 
   render(){
-    const book = this.props.ListOfBooks.find((obj: any) =>{ 
+    const book = this.props.listOfBooks.find((obj: any) =>{ 
       return obj.id ===Number(this.props.match.params.id)
     });
     
@@ -91,9 +91,10 @@ const mapDispatchToProps=(dispatch: any)=> ({
   }
 });
 const mapStateToProps = (state: any) => ({
-  ListOfBooks: selectors.home.getBooksList(state)
+  listOfBooks: selectors.home.getBooksList(state)
 });
 
+export {BookDetails}
 export default connect<MapStateToPropsTypes,any>(
   mapStateToProps,
   mapDispatchToProps

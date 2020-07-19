@@ -56,6 +56,7 @@
     },
     "devDependencies": {
         "@babel/preset-env": "^7.10.4",
+        "@types/deep-freeze": "^0.1.2",
         "@types/enzyme-to-json": "^1.5.3",
         "@types/redux-mock-store": "^1.0.2",
         "deep-freeze": "^0.0.1",

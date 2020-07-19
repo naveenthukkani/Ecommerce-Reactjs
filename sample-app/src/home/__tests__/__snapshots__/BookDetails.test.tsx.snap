@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookDetails renders the component correctly 1`] = `
+<div>
+  <div
+    className="Book-details-container"
+  >
+    <div
+      className="Image-container"
+    >
+      <img
+        alt="Book"
+        src="book.jpg"
+      />
+    </div>
+    <div
+      className="Details-container"
+    >
+      <h1>
+        Eloquent JavaScript, Second Edition
+      </h1>
+      <div>
+        <label>
+          Book Price: 
+        </label>
+        <span>
+          500
+        </span>
+      </div>
+      <div>
+        <label>
+          Author Name: 
+        </label>
+        <span>
+          Marijn Haverbeke
+        </span>
+      </div>
+      <div>
+        <label>
+          Page Count: 
+        </label>
+        <span>
+          472
+        </span>
+      </div>
+      <div>
+        <label>
+          ISBN: 
+        </label>
+        <span>
+          9781593275846
+        </span>
+      </div>
+      <div>
+        <button
+          className="details-buttons"
+          onClick={[Function]}
+        >
+          Add to cart
+        </button>
+        <button
+          className="details-buttons"
+          onClick={[Function]}
+        >
+          Buy Now
+        </button>
+      </div>
+      <div
+        className="Book-Description-detail"
+      >
+        <label>
+          Description: 
+        </label>
+        <p>
+          JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

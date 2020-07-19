@@ -18,5 +18,5 @@ class CartItems extends Component<any> {
     )
   }
 }
-
+export {CartItems};
 export default CartItems;

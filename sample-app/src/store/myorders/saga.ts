@@ -7,7 +7,6 @@ function* handleFetch(data:any) {
   try {
       const orders = yield select(selectors.myorders.getOrdersList);
       orders.push(data.payload);
-      console.log(orders);
       yield put(actions.fetchSuccess(orders));
   } catch (err) {
     if (err instanceof Error && err.stack) {

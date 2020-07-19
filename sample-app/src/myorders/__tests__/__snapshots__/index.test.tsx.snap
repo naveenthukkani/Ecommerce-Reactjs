@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyOrders renders the component correctly 1`] = `
+<div
+  className="Orders-list"
+>
+  <div
+    key="1"
+  >
+    <MyOrder
+      author="Marijn Haverbeke"
+      date="7/19/2020, 12:30:21 PM"
+      id={1}
+      isbn="9781593275846"
+      pages={472}
+      price={500}
+      status="Delivered"
+      subtitle="A Modern Introduction to Programming"
+      title="Eloquent JavaScript, Second Edition"
+    />
+  </div>
+</div>
+`;

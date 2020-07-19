@@ -1,8 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import App from '../App';
 
-test('renders the component', () => {
-  const component = shallow(<App />);
-  expect(component).toMatchSnapshot();
+describe('App', () =>{
+  
+  it('renders app Correctly', () => {
+    const component = shallow(<App />);
+    expect(toJson(component)).toMatchSnapshot();
+  });
 });

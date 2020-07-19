@@ -55,6 +55,11 @@ img {
     text-align: left;
 }
 
+.No-data {
+    text-align: center;
+    width: 100%;
+}
+
 .details-buttons {
     margin: 20px;
     background-color: brown;

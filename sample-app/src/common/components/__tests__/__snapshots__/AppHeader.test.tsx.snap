@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders header component correctly 1`] = `
+<div
+  className="Main-header-container"
+>
+  <div
+    className="Title"
+  >
+    eCommerce Site 
+     
+  </div>
+  <div
+    className="Header-section"
+  >
+    <Link
+      to="/home"
+    >
+      <span>
+        Home
+      </span>
+    </Link>
+    <span>
+       | 
+    </span>
+    <Link
+      to="/myorders"
+    >
+      <span>
+        My Orders
+      </span>
+    </Link>
+    <span>
+       | 
+    </span>
+    <Link
+      to="/cart"
+    >
+      <span>
+        Cart
+      </span>
+    </Link>
+  </div>
+</div>
+`;
