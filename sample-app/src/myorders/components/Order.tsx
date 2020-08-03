@@ -1,9 +1,17 @@
 import React from 'react';
+import { useDispatch} from 'react-redux'
 import "../Style.css"
 import {Order} from "../Order"
-import Book from '../../images/book.jpg'
+import BookImage from '../../images/book.jpg';
+import {actions} from '../../store';
+
 
 export const MyOrder: React.FC<Order> = (props) => {
+  const dispatch = useDispatch()
+  const deleteAction = (e:any,book: any) => {
+    dispatch(actions.myorders.deleteOrder(book));
+  }
+
 return (
     <div className="Order-conatiner" key={props.id}>
       <div className="Header-view">
@@ -17,7 +25,7 @@ return (
             </div>
       </div>
         <div className="Orders-data-container">
-            <img className="Orders-img" src={Book} alt="Book"></img>
+            <img className="Orders-img" src={BookImage} alt="Book"></img>
             <div className="Data-container">
             <span className="Book-title">{props.title}</span>
             <div>
@@ -32,6 +40,7 @@ return (
               <label>Page Count: </label>
               <span>{props.pages}</span>
             </div>
+            <button className="Delete-button" onClick={(e) => deleteAction(e,props)}>Delete</button>
             </div>
         </div>
     </div>

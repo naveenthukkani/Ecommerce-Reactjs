@@ -9,7 +9,7 @@ exports[`MyOrders renders the component correctly 1`] = `
   >
     <MyOrder
       author="Marijn Haverbeke"
-      date="7/19/2020, 12:30:21 PM"
+      date="8/3/2020, 12:18:43 PM"
       id={1}
       isbn="9781593275846"
       pages={472}

@@ -48,6 +48,21 @@
     font-size: 25px;
 }
 
+.Delete-button {
+    margin: 20px;
+    background-color: brown;
+    outline: none;
+    border-color: brown;
+    padding: 5px;
+    color: #fff;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    background-image: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    float: right;
+}
+
 @media only screen and (max-width: 760px) {
     .Orders-data-container {
         display: flex;

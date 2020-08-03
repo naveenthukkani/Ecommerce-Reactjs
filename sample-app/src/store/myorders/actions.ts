@@ -8,7 +8,8 @@ const actions = {
   fetchSuccess:(data: Order[]) =>
     action(OrdersActionTypes.FETCH_SUCCESS, data),
   fetchError:(message: string) =>
-    action(OrdersActionTypes.FETCH_ERROR, message)
+    action(OrdersActionTypes.FETCH_ERROR, message),
+  deleteOrder:(data: Order) => action(OrdersActionTypes.DELETE_ORDER,data),
 }
 
 export default actions;

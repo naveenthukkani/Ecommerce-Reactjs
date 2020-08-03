@@ -1,4 +1,4 @@
-const getOrdersList = (state:any) =>  state.myorders.myorders;
+const getOrdersList = (state:any) =>  state.myorders.orders;
 
 export default {
     getOrdersList
