@@ -22,7 +22,7 @@
         "https": "^1.0.0",
         "moment": "^2.27.0",
         "ng-apimock": "^1.4.9",
-        "node-fetch": "^2.6.0",
+        "node-fetch": "^2.6.1",
         "tcp-port-used": "^1.0.1",
         "yargs": "^15.4.1"
     },
