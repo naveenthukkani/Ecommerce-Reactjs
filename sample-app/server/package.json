@@ -20,7 +20,7 @@
         "cors": "^2.8.5",
         "express": "^4.17.1",
         "https": "^1.0.0",
-        "moment": "^2.27.0",
+        "moment": "^2.29.4",
         "ng-apimock": "^1.4.9",
         "node-fetch": "^2.6.0",
         "tcp-port-used": "^1.0.1",
